@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Stock Management Tool</h1>
+  <div class="preview-pic tab-content">
+    <div class="tab-pane active" id="pic-1"><img src="https://www.easylogistics.site/wp-content/uploads/2017/01/inventory-management-620x350.png"/></div>
+  </div>
+  <br>
+  <H3>This application is created to help the end user to manage the invenotry in a user friendly way!</H3>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Products</h3>
+      <a [routerLink]="['/product']">Product </a>
+      <p>This page contains all products from the inventory.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Beverage & tobacco</h3>
+      <a [routerLink]="['/bauturi-tutun']">Beverage & tobacco</a>
+      <p>This page contains only the products from beverage and tobacco category.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Fruits</h3>
+      <a [routerLink]="['/fruits']">Fruits</a>
+      <p>This page contains only the products from 'Fruits' category.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Food</h3>
+      <a [routerLink]="['/food']">Food</a>
+      <p>This page contains only the products from 'Food' category</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Electronics</h3>
+      <a [routerLink]="['/electronics']">Electronics</a>
+      <p>This page contains only the products from 'Electronics' category</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Clothes</h3>
+      <a [routerLink]="['/clothes']">Clothes</a>
+      <p>This page contains only the products from 'Clothes' category</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Search</h3>
+      <a [routerLink]="['/search']">Search</a>
+      <p>This page is used for the quick search</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Reports</h3>
+      <a [routerLink]="['/report']">Reports</a>
+      <p>This page is used for getting the reports on the specified dates</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!--<a [routerLink]="['/product']">Product </a>
+<a [routerLink]="['/bauturi-tutun']">Beverage & tobacco</a>
+<a [routerLink]="['/fruits']">Fruits</a>
+<a [routerLink]="['/food']">Food</a>
+<a [routerLink]="['/electronics']">Electronics</a>
+<a [routerLink]="['/clothes']">Clothes</a>-->
+

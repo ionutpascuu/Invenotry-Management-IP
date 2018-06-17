@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-2">
+              <form name="empForm">
+                <table>
+                  <tr>
+                    <th colspan="2">Add Product</th>
+                  </tr>
+                  <tr>
+                    <td>product Code:</td>
+                    <td><input id="productCode" name="productCode" ></td>
+                  </tr>
+                  <tr>
+                    <td>product Name:</td>
+                    <td><input id="productName" name="productName"></td>
+                  </tr>
+                  <tr>
+                    <td>price:</td>
+                    <td><input id="price" name="price"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> <button type="button" (click)="createProduct()" class="blue-button">submit</button></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </header>
+      </section>
+      <section class="main">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>product Code</th>
+            <th>product Name</th>
+            <th>price</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let product of products">
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.productCode}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

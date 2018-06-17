@@ -1,0 +1,39 @@
+<!--
+<div class="preview-pic tab-content">
+  <div class="tab-pane active" id="pic-1"><img src="http://americasbestcareplus.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-25-at-7.48.07-AM.png"/></div>
+</div>
+
+
+<app-fruits-list #appFruits></app-fruits-list>
+&lt;!&ndash;<app-product-add (onProductAdded)="appProducts.addProduct($event)"></app-product-add>&ndash;&gt;
+<a [routerLink]="['/']">Home</a>-->
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+  <h2>Fruits </h2>
+  <h3><a [routerLink]="['/']">Home</a></h3>
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img src="http://americasbestcareplus.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-25-at-7.48.07-AM.png"/></div>
+          </div>
+
+        </div>
+        <div class="details col-md-8">
+          <app-fruits-list #appFruits></app-fruits-list>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,129 @@
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col">
+      &lt;!&ndash;     <section>
+             <header class="header">
+               <div class="row">
+                 <div class="col-md-2">
+                   <form name="empForm">
+                     <table>
+                       <tr>
+                         <th colspan="2">Add Employee</th>
+                       </tr>
+                       <tr>
+                         <td>FirstName:</td>
+                         <td><input id="firstName" name="firstName" ></td>
+                       </tr>
+                       <tr>
+                         <td>Phone No:</td>
+                         <td><input id="phoneNo" name="phoneNo"></td>
+                       </tr>
+                       <tr>
+                         <td>Email:</td>
+                         <td><input id="email" name="email"></td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"> <button type="button" (click)="createEmployee()" class="blue-button">submit</button></td>
+                       </tr>
+                     </table>
+                   </form>
+                 </div>
+               </div>
+             </header>
+           </section>&ndash;&gt;
+      <section class="main">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Categories</th>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Size</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngIf="product">
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.categories}}</td>
+            <td>{{product.productCode}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.size}}</td>
+            <td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+  <h2>Product Details</h2>
+  <h3><a [routerLink]="['/']">Back</a></h3>
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img src="http://www.wendia.com/wp-content/uploads/2015/07/purchase-guy.png"/></div>
+          </div>
+
+        </div>
+        <div class="details col-md-6">
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-list-alt"></span>   Name</div></h3>
+            <hr>
+            <h4>Product Name :{{product.productName}}</h4>
+          </div>
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-list-alt"></span>   Product Code</div></h3>
+            <hr>
+            <h4>Product Code :{{product.productCode}}</h4>
+          </div>
+          <div class="panel panel-default text-center">
+            <div class="rating">
+              <h3><div class="panel-title"><span class="glyphicon glyphicon-info-sign"></span>  Category</div></h3>
+              <hr>
+              <h4>{{product.categories}}</h4>
+            </div>
+          </div>
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-comment"></span>   Description</div></h3>
+            <hr>
+            <h4> bla bla bla bla blaa </h4>
+          </div>
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-comment"></span>   Size</div></h3>
+            <hr>
+            <h4> {{product.size}} </h4>
+          </div>
+
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-comment"></span>   Exit From Inventory</div></h3>
+            <hr>
+            <h4>  <button type="button" class="btn btn-danger" (click)="deleteProduct(product)">Exit From Inventory</button> </h4>
+          </div>
+
+            <br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

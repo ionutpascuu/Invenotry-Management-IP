@@ -1,0 +1,47 @@
+<h3>Reports for the desired days</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="startDate">Start Date</label> <input type="text"
+                                                           class="form-control" id="startDate" required [(ngModel)]="startDate"
+                                                           name="startDate">
+    </div>
+    <div class="form-group">
+      <label for="endDate">End Date</label> <input type="text"
+                                                           class="form-control" id="endDate" required [(ngModel)]="endDate"
+                                                           name="endDate">
+    </div>
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <section class="main">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Categories</th>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Size</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of products">
+        <td><a [routerLink]="['/product/', product.productCode]">{{product.productName}}</a></td>
+        <!--          <th scope="row">{{product.id}}</th>-->
+        <td>{{product.categories}}</td>
+        <td>{{product.productCode}}</td>
+        <td>{{product.productName}}</td>
+        <td>{{product.size}}</td>
+        <!--  <td>
+            <button type="button" class="btn btn-danger" (click)="deleteProductP(product)">Delete</button>
+          </td>-->
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</ul>
